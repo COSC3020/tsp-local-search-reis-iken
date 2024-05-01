@@ -3,6 +3,22 @@ function tsp_ls(distance_matrix) {
         return 0;
     }
 
+    let allZeros = true;
+    for (let i = 0; i < distance_matrix.length; i++) {
+        for (let j = 0; j < distance_matrix[i].length; j++) {
+            if (distance_matrix[i][j] !== 0) {
+                allZeros = false;
+                break;
+            }
+        }
+        if (!allZeros) {
+            break;
+        }
+    }
+    if (allZeros) {
+        return 0;
+    }
+
     function calculateTotalLength(route) {
         let totalLength = 0;
         for (let i = 0; i < route.length - 1; i++) {
