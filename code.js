@@ -31,7 +31,7 @@ function tsp_ls(distance_matrix) {
 
     let currentRoute = generateRandomRoute(distance_matrix.length);
     let incumbentRoute = currentRoute.slice();
-    let currentLength = calculateTotalLength(currentRoute);
+    let currentLength = Number.POSITIVE_INFINITY;
     let incumbentRouteLength = currentLength;
     let iterationsWithoutImprovement = 0;
     let maxIterationsWithoutImprovement = 1000;
