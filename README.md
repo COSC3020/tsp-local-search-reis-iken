@@ -51,3 +51,9 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+**MY ANSWER:**
+
+Since we are iterating over all possible pairs of indexes in the route array (2 nested loops), I believe our worst-case asymptotic time complexity should be $\Theta(n^2)$.
+
+In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
