@@ -1,4 +1,8 @@
 function tsp_ls(distance_matrix) {
+    if (distance_matrix.length === 0) {
+        return 0;
+    }
+
     function calculateTotalLength(route) {
         let totalLength = 0;
         for (let i = 0; i < route.length - 1; i++) {
