@@ -20,6 +20,11 @@ function tsp_ls(distance_matrix) {
         return route;
     }
 
+    function twoOptSwap(route, i, k) {
+        let newRoute = route.slice(0, i).concat(route.slice(i, k + 1).reverse(), route.slice(k + 1));
+        return newRoute;
+    }
+
     let currentRoute = generateRandomRoute(distance_matrix.length);
     let incumbentRoute = currentRoute.slice();
     let currentLength = calculateTotalLength(currentRoute);
@@ -30,7 +35,7 @@ function tsp_ls(distance_matrix) {
         let improved = false;
         for (let i = 1; i < currentRoute.length - 1; i++) {
             for (let k = i + 1; k < currentRoute.length; k++) {
-                let newRoute = currentRoute.slice(0, i).concat(currentRoute.slice(i, k).reverse(), currentRoute.slice(k));
+                let newRoute = twoOptSwap(currentRoute, i, k);
                 let newLength = calculateTotalLength(newRoute);
                 if (newLength < currentLength) {
                     currentRoute = newRoute.slice();
