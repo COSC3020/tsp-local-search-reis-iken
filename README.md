@@ -54,6 +54,6 @@ reasoning, to this markdown file.
 
 **MY ANSWER:**
 
-Since we are iterating over all possible pairs of indexes in the route array (2 nested loops), I believe our worst-case asymptotic time complexity should be $\Theta(n^2)$.
+The main while loop runs for maxIterationsWithoutImprovement times, which is a constant value. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So, I believe our worst-case asymptotic time complexity should be $\Theta(n^2)$ where n is the number of elements in the currentRoute array.
 
 In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
