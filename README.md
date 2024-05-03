@@ -54,6 +54,6 @@ reasoning, to this markdown file.
 
 **MY ANSWER:**
 
-The main while loop runs for maxIterationsWithoutImprovement times, which is a constant value. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So, I believe our worst-case asymptotic time complexity should be $\Theta(n^2)$ where n is the number of elements in the currentRoute array.
+The main while loop runs for up to maxIterationsWithoutImprovement (1000) times; however, when an improvement is made, we reset the incrementing iterationsWithoutImprovement variable back to 0 and thus, the main while loop runs for a finite, yet not particularly defined number of iterations that we shall call m for now. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So, I believe our worst-case asymptotic time complexity should be $\Theta(m * n^2)$ where n is the number of elements in the currentRoute array and m is a finite, yet not particularly defined number.
 
 In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
