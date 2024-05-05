@@ -54,10 +54,8 @@ reasoning, to this markdown file.
 
 **MY ANSWER:**
 
-The main while loop runs for up to maxIterationsWithoutImprovement (1000) times; however, when an improvement is made, we reset the incrementing iterationsWithoutImprovement variable back to 0 and thus, the main while loop runs for a finite, yet not particularly defined number of iterations that we shall call m for now. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$.
+If I am correct, I believe that the number of possible swaps there could be is $n^2$, which should mean that the outer while loop could run for about $n^2$ iterations. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$. So we have $n^2$ iterations of $n^2$...
 
-Let's talk more about m now. I believe the maximum amount of times that the iterationsWithoutImprovement variable could be reset to 0 is $1000(n!)$. This is because the number of permutations is n!, and the maximum number of times that the loop could execute before resetting is 1000. For the sake of asymptotic analysis, we will ignore the constant factor of 1000 and only pay attention to n!.
-
-So, I believe our worst-case asymptotic time complexity should be $\Theta(n!(n^2))$.
+So, I believe our worst-case asymptotic time complexity should be $\Theta(n^4)$.
 
 In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
