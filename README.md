@@ -58,6 +58,10 @@ In terms of how many possible tours there are, we know that there are n! permuta
 
 We do know that we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$.
 
-I assert the worst-case asymptotic time complexity should be $\Theta(n!(n^2))$.
+Additionally, the twoOptSwap and calculateTotalLength functions have complexities of n (slicing in twoOptSwap and a for loop in calculateTotalLength).
+
+Thus, we can see that $n! * n^2 * n = n!(n^3)$
+
+I assert the worst-case asymptotic time complexity should be $\Theta(n!(n^3))$.
 
 In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
