@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/C_k9ew3E)
 # Traveling Salesperson Problem -- Local Search
 
 This exercise is about the Traveling Salesperson Problem I mentioned in the
@@ -50,3 +51,17 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+**MY ANSWER:**
+
+In terms of how many possible tours there are, we know that there are n! permutations. So then, in the worst case, we will find improvements until all permutations have been considered, in which case we will find improvements no longer. So the outer while loop runs for n! iterations.
+
+We do know that we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$.
+
+Additionally, the twoOptSwap and calculateTotalLength functions have complexities of n (slicing in twoOptSwap and a for loop in calculateTotalLength).
+
+Thus, we can see that $n! * n^2 * n = n!(n^3)$
+
+I assert the worst-case asymptotic time complexity should be $\Theta(n!(n^3))$.
+
+In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
