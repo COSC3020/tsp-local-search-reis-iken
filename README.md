@@ -54,8 +54,8 @@ reasoning, to this markdown file.
 
 **MY ANSWER:**
 
-If I am correct, I believe that we cannot specify how many times the while loop iterates for. It is not an infinite value, but rather it is finite, yet unbounded. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$. So we have $n^2$ iterations of $n^2$...
+In terms of how many possible tours there are, we know that there are ((n-1)!)/2 unique tours. It is true, however, that my implementation has the potential to explore the same tour more than once. In the worst-case situation, I suppose we would not find an improvement for 999 consecutive iterations, and then find an improvement, and the counter would be reset. We could say that this means a worst-case scenario of (999(n-1)!)/2 iterations of the outer while loop... except no, we cannot, since the same tour might be explored more than once. We know that we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$.
 
-So, I believe our worst-case asymptotic time complexity should be $\Theta(unbounded(n^2))$ - essentially unbounded.
+I can do my best to generalize, and assert the worst-case asymptotic time complexity should be $\Theta(n!(n^2))$.
 
 In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
