@@ -56,6 +56,6 @@ reasoning, to this markdown file.
 
 If I am correct, I believe that we cannot specify how many times the while loop iterates for. It is not an infinite value, but rather it is finite, yet unbounded. Within this while loop, we have 2 nested loops that iterate over all the elements in the currentRoute array. So this part of our code gives us the expression $n^2$. So we have $n^2$ iterations of $n^2$...
 
-So, I believe our worst-case asymptotic time complexity should be $\Theta($unbounded$(n^2))$ - essentially unbounded.
+So, I believe our worst-case asymptotic time complexity should be $\Theta(unbounded(n^2))$ - essentially unbounded.
 
 In terms of memory, I believe our worst case is when the distance matrix has the dimensions n x n, meaning the asymptotic memory complexity should be $\Theta(n^2)$.
